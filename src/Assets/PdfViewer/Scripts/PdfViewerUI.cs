@@ -35,15 +35,21 @@ namespace UnityPdfViewer
             previousButton?.onClick.AddListener(PreviousPage);
         }
 
-        private void NextPage()
+        public void NextPage()
         {
             navigator.Next();
             UpdateUI();
         }
 
-        private void PreviousPage()
+        public void PreviousPage()
         {
             navigator.Previous();
+            UpdateUI();
+        }
+        
+        public void GoToPage(int pageNumber)
+        {
+            navigator.GoTo(pageNumber);
             UpdateUI();
         }
 

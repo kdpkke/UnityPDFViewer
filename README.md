@@ -36,13 +36,11 @@ This Unity library is built on top of:
 7. If you want to call the available public methods in code:  
 
  ```csharp
- Texture2D[] pages = PdfLoader.LoadPdfAsTextures(pdfPath, renderDPI);
- PdfNavigator navigator = new PdfNavigator(pages);
-
+ pdfviewerUI = GetComponent<PDFViewerUI>();
  // Then you can use:
- navigator.Next();
- navigator.Previous();
- navigator.GoTo(3); // Go to page 3
+ pdfviewerUI.NextPage();
+ pdfviewerUI.PreviousPage();
+ pdfviewerUI.GoToPage(3); // Go to page 3
  ```
  
 Press play → the PDF is loaded and displayed in the UI.
