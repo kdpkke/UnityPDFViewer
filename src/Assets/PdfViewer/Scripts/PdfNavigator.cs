@@ -31,11 +31,11 @@ namespace UnityPdfViewer
             CurrentPage = Mathf.Max(CurrentPage - 1, 0);
         }
 
-        // Go to specific page (1-based)
+        // Go to specific page
         public void GoTo(int pageNumber)
         {
             if (Pages.Length == 0) return;
-            CurrentPage = Mathf.Clamp(pageNumber - 1, 0, Pages.Length - 1);
+            CurrentPage = Mathf.Clamp(pageNumber, 0, Pages.Length - 1);
         }
         
         public void Dispose()
