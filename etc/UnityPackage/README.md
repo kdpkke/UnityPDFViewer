@@ -1,6 +1,6 @@
 # Unity PDF Viewer
 
-[![GitHub license](https://img.shields.io/github/license/muratoreware/unitypdfviewer?style=flat-square)](https://github.com/kdpkke/UnityPDFViewer/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
 A Unity library to render [PDF files](https://en.wikipedia.org/wiki/PDF) inside your Unity scene.  
 
