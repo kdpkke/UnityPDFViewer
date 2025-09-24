@@ -1,0 +1,837 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDFtoImage</name>
+    </assembly>
+    <members>
+        <member name="T:PDFtoImage.Conversion">
+            <summary>
+            Provides methods to render PDFs into images.
+            </summary>
+            <summary>
+            Provides methods to render PDFs into images.
+            </summary>
+            <summary>
+            Provides methods to render PDFs into images.
+            </summary>
+            <summary>
+            Provides methods to render PDFs into images.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageCount(System.String,System.String)">
+            <summary>
+            Returns the page count of a given PDF.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page count of the given PDF.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageSizes(System.String,System.String)">
+            <summary>
+            Returns the sizes of all PDF pages.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page sizes containing width and height.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.String,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders all pages of a given PDF into images.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders all pages of a given PDF into images.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="pages">The specific pages to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageSize(System.String,System.Index,System.String)">
+            <summary>
+            Returns the PDF page size for a given page number.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to query the size for.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page size containing width and height.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveJpeg(System.String,System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a JPEG.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveJpeg(System.IO.Stream,System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a JPEG.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SavePng(System.String,System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a PNG.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SavePng(System.IO.Stream,System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a PNG.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveWebp(System.String,System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a bitmap.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveWebp(System.IO.Stream,System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a bitmap.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImage(System.String,System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF into an image.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The converted PDF page as an image.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.String,System.Range,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a range of pages of a given PDF into images.
+            </summary>
+            <param name="pdfAsBase64String">The PDF encoded as Base64.</param>
+            <param name="pages">The specific pages to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageCount(System.Byte[],System.String)">
+            <summary>
+            Returns the page count of a given PDF.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page count of the given PDF.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageSizes(System.Byte[],System.String)">
+            <summary>
+            Returns the sizes of all PDF pages.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page sizes containing width and height.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.Byte[],System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders all pages of a given PDF into images.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.Byte[],System.Collections.Generic.IEnumerable{System.Int32},System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders all pages of a given PDF into images.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="pages">The specific pages to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageSize(System.Byte[],System.Index,System.String)">
+            <summary>
+            Returns the PDF page size for a given page number.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to query the size for.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page size containing width and height.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveJpeg(System.String,System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a JPEG.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveJpeg(System.IO.Stream,System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a JPEG.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SavePng(System.String,System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a PNG.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SavePng(System.IO.Stream,System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a PNG.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveWebp(System.String,System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a bitmap.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveWebp(System.IO.Stream,System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a bitmap.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImage(System.Byte[],System.Index,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF into an image.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The converted PDF page as an image.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.Byte[],System.Range,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a range of pages of a given PDF into images.
+            </summary>
+            <param name="pdfAsByteArray">The PDF as a byte array.</param>
+            <param name="pages">The specific pages to be converted.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageCount(System.IO.Stream,System.Boolean,System.String)">
+            <summary>
+            Returns the page count of a given PDF.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page count of the given PDF.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageSizes(System.IO.Stream,System.Boolean,System.String)">
+            <summary>
+            Returns the sizes of all PDF pages.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page sizes containing width and height.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.IO.Stream,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders all pages of a given PDF into images.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.IO.Stream,System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a selection of pages of a given PDF into images.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="pages">The specific pages to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveJpeg(System.String,System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a JPEG.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveJpeg(System.IO.Stream,System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a JPEG.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SavePng(System.String,System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a PNG.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SavePng(System.IO.Stream,System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a PNG.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveWebp(System.String,System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a bitmap.
+            </summary>
+            <param name="imageFilename">The output image file path.</param>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.SaveWebp(System.IO.Stream,System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF and saves it as a bitmap.
+            </summary>
+            <param name="imageStream">The output image stream.</param>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+        </member>
+        <member name="M:PDFtoImage.Conversion.GetPageSize(System.IO.Stream,System.Index,System.Boolean,System.String)">
+            <summary>
+            Returns the PDF page size for a given page number.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to query the size for.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <returns>The page size containing width and height.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImage(System.IO.Stream,System.Index,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a single page of a given PDF into an image.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="page">The specific page to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF page as an image.</returns>
+        </member>
+        <member name="M:PDFtoImage.Conversion.ToImages(System.IO.Stream,System.Range,System.Boolean,System.String,PDFtoImage.RenderOptions)">
+            <summary>
+            Renders a range of pages of a given PDF into images.
+            </summary>
+            <param name="pdfStream">The PDF as a stream.</param>
+            <param name="pages">The specific pages to be converted.</param>
+            <param name="leaveOpen"><see langword="true"/> to leave the <paramref name="pdfStream"/> open after the PDF document is loaded; otherwise, <see langword="false"/>.</param>
+            <param name="password">The password for opening the PDF. Use <see langword="null"/> if no password is needed.</param>
+            <param name="options">Additional options for PDF rendering.</param>
+            <returns>The rendered PDF pages as images.</returns>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfCannotOpenFileException">
+            <summary>
+            Thrown if the PDF file was not found or could not be opened.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfCannotOpenFileException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfException">
+            <summary>
+            Base class for all PDF related exceptions.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfException.#ctor(System.String)">
+            <summary>
+            Base class for all PDF related exceptions.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfInvalidFormatException">
+            <summary>
+            Thrown if the PDF format is invalid or corrupted.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfInvalidFormatException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfPageNotFoundException">
+            <summary>
+            Thrown if the PDF does not contain the given page number.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfPageNotFoundException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfPasswordProtectedException">
+            <summary>
+            Thrown if the PDF requires a password and the given password was not given or incorrect.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfPasswordProtectedException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfUnknownException">
+            <summary>
+            Thrown on unknown PDF errors.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfUnknownException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="T:PDFtoImage.Exceptions.PdfUnsupportedSecuritySchemeException">
+            <summary>
+            Thrown if the PDF file uses an unsupported security scheme.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Exceptions.PdfUnsupportedSecuritySchemeException.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:PDFtoImage.Internals.NativeMethods.FPDF_LoadCustomDocument(System.IO.Stream,System.String,System.Int32)">
+            <summary>
+            Opens a document using a .NET Stream. Allows opening huge
+            PDFs without loading them into memory first.
+            </summary>
+            <param name="input">The input Stream. Don't dispose prior to closing the pdf.</param>
+            <param name="password">Password, if the PDF is protected. Can be null.</param>
+            <param name="id">Retrieves an IntPtr to the COM object for the Stream. The caller must release this with Marshal.Release prior to Disposing the Stream.</param>
+            <returns>An IntPtr to the FPDF_DOCUMENT object.</returns>
+        </member>
+        <member name="T:PDFtoImage.Internals.NativeMethods.FPDFBitmap">
+            <summary>
+            A number indicating for bitmap format.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDFBitmap.Gray">
+            <summary>
+            Gray scale bitmap, one byte per pixel.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDFBitmap.BGR">
+            <summary>
+            3 bytes per pixel, byte order: blue, green, red.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDFBitmap.BGRx">
+            <summary>
+            4 bytes per pixel, byte order: blue, green, red, unused.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDFBitmap.BGRA">
+            <summary>
+            4 bytes per pixel, byte order: blue, green, red, alpha.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.ANNOT">
+            <summary>
+            Set if annotations are to be rendered.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.LCD_TEXT">
+            <summary>
+            Set if using text rendering optimized for LCD display. This flag will only take effect if anti-aliasing is enabled for text.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.NO_NATIVETEXT">
+            <summary>
+            Don't use the native text output available on some platforms.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.GRAYSCALE">
+            <summary>
+            Grayscale output.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.DEBUG_INFO">
+            <summary>
+            Obsolete, has no effect, retained for compatibility.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.NO_CATCH">
+            <summary>
+            Obsolete, has no effect, retained for compatibility.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.RENDER_LIMITEDIMAGECACHE">
+            <summary>
+            Limit image cache size.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.RENDER_FORCEHALFTONE">
+            <summary>
+            Always use halftone for image stretching.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.PRINTING">
+            <summary>
+            Render for printing.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.RENDER_NO_SMOOTHTEXT">
+            <summary>
+            Set to disable anti-aliasing on text. This flag will also disable LCD optimization for text rendering.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.RENDER_NO_SMOOTHIMAGE">
+            <summary>
+            Set to disable anti-aliasing on images.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.RENDER_NO_SMOOTHPATH">
+            <summary>
+            Set to disable anti-aliasing on paths.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.REVERSE_BYTE_ORDER">
+            <summary>
+            Set whether to render in a reverse Byte order, this flag is only used when rendering to a bitmap.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF.CONVERT_FILL_TO_STROKE">
+            <summary>
+            Set whether fill paths need to be stroked. This flag is only used when FPDF_COLORSCHEME is passed in, since with a single fill color for paths the boundaries of adjacent fill paths are less visible.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.SUCCESS">
+            <summary>
+            No error.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.UNKNOWN">
+            <summary>
+            Unknown error.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.FILE">
+            <summary>
+            File not found or could not be opened.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.FORMAT">
+            <summary>
+            File not in PDF format or corrupted.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.PASSWORD">
+            <summary>
+            Password required or incorrect password.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.SECURITY">
+            <summary>
+            Unsupported security scheme.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.Internals.NativeMethods.FPDF_ERR.PAGE">
+            <summary>
+            Page not found or content error.
+            </summary>
+        </member>
+        <member name="T:PDFtoImage.Internals.PdfDocument">
+            <summary>
+            Provides functionality to render a PDF document.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Internals.PdfDocument.Load(System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the PdfDocument class with the provided stream.
+            </summary>
+            <param name="stream">Stream for the PDF document.</param>
+            <param name="password">Password for the PDF document.</param>
+            <param name="disposeStream">Decides if <paramref name="stream"/> will closed on dispose as well.</param>
+        </member>
+        <member name="P:PDFtoImage.Internals.PdfDocument.PageSizes">
+            <summary>
+            Size of each page in the PDF document.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Internals.PdfDocument.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:PDFtoImage.Internals.PdfDocument.Dispose(System.Boolean)">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <param name="disposing">Whether this method is called from <see cref="M:PDFtoImage.Internals.PdfDocument.Dispose"/>.</param>
+        </member>
+        <member name="T:PDFtoImage.IRenderOptions">
+            <summary>
+            Contains all relevant information to render a PDF page into an image.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.Dpi">
+            <summary>
+            The DPI scaling to use for rasterization of the PDF.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.Width">
+            <summary>
+            The width of the desired page. Use <see langword="null"/> if the original width should be used.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.Height">
+            <summary>
+            The height of the desired page. Use <see langword="null"/> if the original height should be used.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.WithAnnotations">
+            <summary>
+            Specifies whether annotations be rendered.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.WithFormFill">
+            <summary>
+            Specifies whether form filling will be rendered.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.WithAspectRatio">
+            <summary>
+            Specifies that <see cref="P:PDFtoImage.IRenderOptions.Width"/> or <see cref="P:PDFtoImage.IRenderOptions.Height"/> should be adjusted for aspect ratio (either one must be <see langword="null"/>).
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.Rotation">
+            <summary>
+            Specifies the rotation at 90 degree intervals.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.AntiAliasing">
+            <summary>
+            Specifies which parts of the PDF should be anti-aliasing for rendering.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.BackgroundColor">
+            <summary>
+            Specifies the background color. Defaults to <see cref="F:SkiaSharp.SKColors.White"/>.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.Bounds">
+            <summary>
+            Specifies the bounds for the page relative to <see cref="M:PDFtoImage.Conversion.GetPageSizes(System.String,System.String)"/>. This can be used for clipping (bounds inside of page) or additional margins (bounds outside of page). The bound units are relative to the PDF size (at 72 DPI).
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.UseTiling">
+            <summary>
+            Specifies that the PDF should be rendered as several segments and merged into the final image. This can help in cases where the output image is too large, causing corrupted images (e.g. missing text) or crashes.
+            </summary>
+        </member>
+        <member name="P:PDFtoImage.IRenderOptions.DpiRelativeToBounds">
+            <summary>
+            Specifies that <see cref="P:PDFtoImage.IRenderOptions.Dpi"/> and <see cref="P:PDFtoImage.IRenderOptions.WithAspectRatio"/> will be calculated relative to <see cref="P:PDFtoImage.IRenderOptions.Bounds"/> instead of the original PDF.
+            </summary>
+        </member>
+        <member name="T:PDFtoImage.PdfAntiAliasing">
+            <summary>
+            Specifies which parts of the PDF should be rendered with anti-aliasing.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfAntiAliasing.None">
+            <summary>
+            No anti-aliasing.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfAntiAliasing.Text">
+            <summary>
+            Use anti-aliasing on text.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfAntiAliasing.Images">
+            <summary>
+            Use anti-aliasing on images.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfAntiAliasing.Paths">
+            <summary>
+            Use anti-aliasing on paths.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfAntiAliasing.All">
+            <summary>
+            Use anti-aliasing on everything.
+            </summary>
+        </member>
+        <member name="T:PDFtoImage.PdfRotation">
+            <summary>
+            Specifies the rotation of pages shown in the PDF renderer.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfRotation.Rotate0">
+            <summary>
+            No rotation.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfRotation.Rotate90">
+            <summary>
+            Rotated 90 degrees clockwise.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfRotation.Rotate180">
+            <summary>
+            Rotated 180 degrees.
+            </summary>
+        </member>
+        <member name="F:PDFtoImage.PdfRotation.Rotate270">
+            <summary>
+            Rotated 90 degrees counter-clockwise.
+            </summary>
+        </member>
+        <member name="T:PDFtoImage.RenderOptions">
+            <summary>
+            Contains all relevant information to render a PDF page into an image.
+            </summary>
+            <param name="Dpi">The DPI scaling to use for rasterization of the PDF.</param>
+            <param name="Width">The width of the desired page. Use <see langword="null"/> if the original width should be used.</param>
+            <param name="Height">The height of the desired page. Use <see langword="null"/> if the original height should be used.</param>
+            <param name="WithAnnotations">Specifies whether annotations be rendered.</param>
+            <param name="WithFormFill">Specifies whether form filling will be rendered.</param>
+            <param name="WithAspectRatio">Specifies that <paramref name="Width"/> or <paramref name="Height"/> should be adjusted for aspect ratio (either one must be <see langword="null"/>).</param>
+            <param name="Rotation">Specifies the rotation at 90 degree intervals.</param>
+            <param name="AntiAliasing">Specifies which parts of the PDF should be anti-aliasing for rendering.</param>
+            <param name="BackgroundColor">Specifies the background color. Defaults to <see cref="F:SkiaSharp.SKColors.White"/>.</param>
+            <param name="Bounds">Specifies the bounds for the page relative to <see cref="M:PDFtoImage.Conversion.GetPageSizes(System.String,System.String)"/>. This can be used for clipping (bounds inside of page) or additional margins (bounds outside of page). The bound units are relative to the PDF size (at 72 DPI).</param>
+            <param name="UseTiling">Specifies that the PDF should be rendered as several segments and merged into the final image. This can help in cases where the output image is too large, causing corrupted images (e.g. missing text) or crashes.</param>
+            <param name="DpiRelativeToBounds">Specifies that <see cref="P:PDFtoImage.RenderOptions.Dpi"/> and <see cref="P:PDFtoImage.RenderOptions.WithAspectRatio"/> will be calculated relative to <see cref="P:PDFtoImage.RenderOptions.Bounds"/> instead of the original PDF.</param>
+        </member>
+        <member name="M:PDFtoImage.RenderOptions.#ctor(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Boolean,PDFtoImage.PdfRotation,PDFtoImage.PdfAntiAliasing,System.Nullable{SkiaSharp.SKColor},System.Nullable{System.Drawing.RectangleF},System.Boolean,System.Boolean)">
+            <summary>
+            Contains all relevant information to render a PDF page into an image.
+            </summary>
+            <param name="Dpi">The DPI scaling to use for rasterization of the PDF.</param>
+            <param name="Width">The width of the desired page. Use <see langword="null"/> if the original width should be used.</param>
+            <param name="Height">The height of the desired page. Use <see langword="null"/> if the original height should be used.</param>
+            <param name="WithAnnotations">Specifies whether annotations be rendered.</param>
+            <param name="WithFormFill">Specifies whether form filling will be rendered.</param>
+            <param name="WithAspectRatio">Specifies that <paramref name="Width"/> or <paramref name="Height"/> should be adjusted for aspect ratio (either one must be <see langword="null"/>).</param>
+            <param name="Rotation">Specifies the rotation at 90 degree intervals.</param>
+            <param name="AntiAliasing">Specifies which parts of the PDF should be anti-aliasing for rendering.</param>
+            <param name="BackgroundColor">Specifies the background color. Defaults to <see cref="F:SkiaSharp.SKColors.White"/>.</param>
+            <param name="Bounds">Specifies the bounds for the page relative to <see cref="M:PDFtoImage.Conversion.GetPageSizes(System.String,System.String)"/>. This can be used for clipping (bounds inside of page) or additional margins (bounds outside of page). The bound units are relative to the PDF size (at 72 DPI).</param>
+            <param name="UseTiling">Specifies that the PDF should be rendered as several segments and merged into the final image. This can help in cases where the output image is too large, causing corrupted images (e.g. missing text) or crashes.</param>
+            <param name="DpiRelativeToBounds">Specifies that <see cref="P:PDFtoImage.RenderOptions.Dpi"/> and <see cref="P:PDFtoImage.RenderOptions.WithAspectRatio"/> will be calculated relative to <see cref="P:PDFtoImage.RenderOptions.Bounds"/> instead of the original PDF.</param>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.Dpi">
+            <summary>The DPI scaling to use for rasterization of the PDF.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.Width">
+            <summary>The width of the desired page. Use <see langword="null"/> if the original width should be used.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.Height">
+            <summary>The height of the desired page. Use <see langword="null"/> if the original height should be used.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.WithAnnotations">
+            <summary>Specifies whether annotations be rendered.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.WithFormFill">
+            <summary>Specifies whether form filling will be rendered.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.WithAspectRatio">
+            <summary>Specifies that <paramref name="Width"/> or <paramref name="Height"/> should be adjusted for aspect ratio (either one must be <see langword="null"/>).</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.Rotation">
+            <summary>Specifies the rotation at 90 degree intervals.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.AntiAliasing">
+            <summary>Specifies which parts of the PDF should be anti-aliasing for rendering.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.BackgroundColor">
+            <summary>Specifies the background color. Defaults to <see cref="F:SkiaSharp.SKColors.White"/>.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.Bounds">
+            <summary>Specifies the bounds for the page relative to <see cref="M:PDFtoImage.Conversion.GetPageSizes(System.String,System.String)"/>. This can be used for clipping (bounds inside of page) or additional margins (bounds outside of page). The bound units are relative to the PDF size (at 72 DPI).</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.UseTiling">
+            <summary>Specifies that the PDF should be rendered as several segments and merged into the final image. This can help in cases where the output image is too large, causing corrupted images (e.g. missing text) or crashes.</summary>
+        </member>
+        <member name="P:PDFtoImage.RenderOptions.DpiRelativeToBounds">
+            <summary>Specifies that <see cref="P:PDFtoImage.RenderOptions.Dpi"/> and <see cref="P:PDFtoImage.RenderOptions.WithAspectRatio"/> will be calculated relative to <see cref="P:PDFtoImage.RenderOptions.Bounds"/> instead of the original PDF.</summary>
+        </member>
+        <member name="M:PDFtoImage.RenderOptions.#ctor">
+            <summary>
+            Constructs <see cref="T:PDFtoImage.RenderOptions"/> with default values.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+            Reserved to be used by the compiler for tracking metadata.
+            This class should not be used by developers in source code.
+            </summary>
+        </member>
+    </members>
+</doc>

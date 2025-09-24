@@ -1,0 +1,36 @@
+{
+    "name": "com.muratoreware.unitypdfviewer",
+    "version": "1.0.0",
+    "displayName": "UnityPDFViewer",
+    "description": "A PDF viewer for Unity using SkiaSharp and PDFtoImage.",
+    "unity": "2022.3",
+    "documentationUrl": "https://github.com/kdpkke/UnityPDFViewer",
+    "dependencies": {},
+    "keywords": [
+        "PDF",
+        "Bitmap",
+        "Image",
+        "Convert",
+        "Conversion",
+        "LoadPDF",
+        "PDFViewer",
+        "UnityPDFViewer",
+        "UnityPDF",
+        "PDFium",
+        "SkiaSharp",
+        "Skia",
+        "PNG",
+        "JPG",
+        "JPEG",
+        "WEBP",
+        "Windows",
+        "Linux",
+        "macOS",
+        "Android"
+    ],
+    "author": {
+        "name": "Matteo Muratore",
+        "email": "matteomuratoredev@gmail.com"
+    },
+    "license": "MIT"
+}
