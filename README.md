@@ -9,6 +9,18 @@ This Unity library is built on top of:
 
 ---
 
+## ☕ Like this project?
+
+This project is developed and maintained in my spare time. If it has saved you time or helped you build something cool, please consider buying me a coffee to say thanks!
+
+Your support keeps me caffeinated and motivated to work on new features and bug fixes.
+
+<a href="https://paypal.me/matteomuratore1">
+  <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Donate with PayPal" />
+</a>
+
+---
+
 ## Getting started
 
 1. Place your **PDF file(s)** inside the Unity `StreamingAssets` folder.  
