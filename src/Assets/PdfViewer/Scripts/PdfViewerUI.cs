@@ -13,15 +13,25 @@ namespace UnityPdfViewer
         public Button nextButton;      // next page button
         public Button previousButton;  // previous page button
 
-        [Header("PDF Settings")]
-        public string pdfFileName = "document.pdf"; // PDF in StreamingAssets
         [Range(72, 300)] public int renderDPI = 150; // PDF render DPI
 
         private PdfNavigator navigator; // page navigation
         private string pdfPath;         // full path to PDF
 
-        private void Start()
+        protected void Start()
         {
+            nextButton?.onClick.AddListener(NextPage);
+            previousButton?.onClick.AddListener(PreviousPage);
+        }
+
+        public void LoadPDF(string pdfFileName)
+        {
+            if (navigator != null)
+            {
+                navigator.Dispose();
+                navigator = null; 
+            }
+            
             pdfPath = Path.Combine(Application.streamingAssetsPath, pdfFileName);
 
             // load PDF pages
@@ -29,10 +39,6 @@ namespace UnityPdfViewer
             navigator = new PdfNavigator(pages);
 
             UpdateUI(); // display first page
-
-            // attach buttons
-            nextButton?.onClick.AddListener(NextPage);
-            previousButton?.onClick.AddListener(PreviousPage);
         }
 
         public void NextPage()

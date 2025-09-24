@@ -17,7 +17,7 @@ This Unity library is built on top of:
 
 ### Mandatory setup
 - **RawImage**: assign a `RawImage` UI element where the PDF pages will be rendered.  
-- **PDF File Name**: set the name of your file (e.g. `document.pdf`) in the `PDF File Name` property of the component.  
+- **PDF File Name**: set the name of your PDF file (e.g. `document.pdf`) when calling the `LoadPDF()` method (it will take the correct path from the StreamingAssets folder automatically).
 
 ### Optional setup
 - **Navigation buttons**: assign `Next` and `Previous` `Button` components to allow page navigation.  
@@ -36,11 +36,13 @@ This Unity library is built on top of:
 7. If you want to call the available public methods in code:  
 
  ```csharp
- pdfviewerUI = GetComponent<PDFViewerUI>();
+ pdfViewerUI = GetComponent<PDFViewerUI>();
+ pdfViewerUI.LoadPDF(pdfFileName);
+ 
  // Then you can use:
- pdfviewerUI.NextPage();
- pdfviewerUI.PreviousPage();
- pdfviewerUI.GoToPage(3); // Go to page 3
+ pdfViewerUI.NextPage();
+ pdfViewerUI.PreviousPage();
+ pdfViewerUI.GoToPage(3); // Go to page 3
  ```
  
 Press play → the PDF is loaded and displayed in the UI.
