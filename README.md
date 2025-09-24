@@ -54,7 +54,7 @@ Press play → the PDF is loaded and displayed in the UI.
 2. Click on the `+` button (top-left corner) and select `Install package from git URL...`.
 3. Enter the following URL and confirm with the `Install` button:
 ```
-https://github.com/kdpkke/UnityPDFViewer?path=etc/UnityPackage
+https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage
 ```
 
 ## License
