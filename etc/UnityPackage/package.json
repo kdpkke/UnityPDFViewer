@@ -1,6 +1,6 @@
 {
     "name": "com.muratoreware.unitypdfviewer",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "displayName": "UnityPDFViewer",
     "description": "A PDF viewer for Unity using SkiaSharp and PDFtoImage.",
     "unity": "2022.3",

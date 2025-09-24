@@ -15,7 +15,9 @@ namespace UnityPdfViewer
 
         [Range(72, 300)] public int renderDPI = 150; // PDF render DPI
 
-        private PdfNavigator navigator; // page navigation
+        [HideInInspector]
+        public PdfNavigator navigator;
+        
         private string pdfPath;         // full path to PDF
 
         protected void Start()
