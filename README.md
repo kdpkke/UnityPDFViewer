@@ -53,8 +53,9 @@ Press play → the PDF is loaded and displayed in the UI.
 1. Open your project and navigate to `Window` → `Package Manager`.
 2. Click on the `+` button (top-left corner) and select `Install package from git URL...`.
 3. Enter the following URL and confirm with the `Install` button:
-
+```
 https://github.com/kdpkke/UnityPDFViewer?path=etc/UnityPackage
+```
 
 ## License
 This project is licensed under the MIT License – see the [LICENSE](https://github.com/kdpkke/UnityPDFViewer/blob/main/LICENSE) file for details.
