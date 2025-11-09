@@ -7,6 +7,14 @@ A Unity library to render [PDF files](https://en.wikipedia.org/wiki/PDF) inside 
 This Unity library is built on top of:
 * [PDFtoImage](https://github.com/sungaila/PDFtoImage)  
 
+### Unity project installation
+1. Open your project and navigate to `Window` → `Package Manager`.
+2. Click on the `+` button (top-left corner) and select `Install package from git URL...`.
+3. Enter the following URL and confirm with the `Install` button:
+```
+https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage
+```
+
 ---
 
 ## ☕ Like this project?

@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "UnityPDFViewer/1.0.2": {
+      "UnityPDFViewer/1.0.4": {
         "dependencies": {
           "PDFtoImage": "5.1.1.0",
           "SkiaSharp": "3.119.0.0",
@@ -70,7 +70,7 @@
     }
   },
   "libraries": {
-    "UnityPDFViewer/1.0.2": {
+    "UnityPDFViewer/1.0.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
