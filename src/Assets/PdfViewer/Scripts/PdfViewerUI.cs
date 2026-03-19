@@ -13,12 +13,7 @@ namespace UnityPdfViewer
         public Button nextButton;      // next page button
         public Button previousButton;  // previous page button
 
-        [Header("PDF Settings")]
-        [Range(72, 300)] public int renderDPI = 150;
-
-        [Tooltip("If true, the path is relative to StreamingAssets (e.g. \"docs/manual.pdf\").\n" +
-                 "If false, the path must be an absolute path (e.g. \"C:/PDFs/manual.pdf\").")]
-        public bool useStreamingAssets = true;
+        [Range(72, 300)] public int renderDPI = 150; // PDF render DPI
 
         [HideInInspector]
         public PdfNavigator navigator;
@@ -31,14 +26,7 @@ namespace UnityPdfViewer
             previousButton?.onClick.AddListener(PreviousPage);
         }
 
-        /// <summary>
-        /// Loads a PDF file. The path is resolved based on <see cref="useStreamingAssets"/>:
-        /// <list type="bullet">
-        ///   <item><c>useStreamingAssets = true</c> (default): pass a relative path inside StreamingAssets (e.g. "manual.pdf" or "docs/manual.pdf").</item>
-        ///   <item><c>useStreamingAssets = false</c>: pass an absolute file path (e.g. "C:/Users/me/Documents/manual.pdf").</item>
-        /// </list>
-        /// </summary>
-        public void LoadPDF(string path)
+        public void LoadPDF(string absolutePath)
         {
             if (navigator != null)
             {
@@ -46,9 +34,7 @@ namespace UnityPdfViewer
                 navigator = null;
             }
 
-            pdfPath = useStreamingAssets
-                ? Path.Combine(Application.streamingAssetsPath, path)
-                : path;
+            pdfPath = Path.GetFullPath(absolutePath);
 
             Texture2D[] pages = PdfLoader.LoadPdfAsTextures(pdfPath, renderDPI);
             navigator = new PdfNavigator(pages);

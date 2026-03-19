@@ -6,11 +6,11 @@ using UnityPdfViewer;
 public class LevelManager : MonoBehaviour
 {
     public PdfViewerUI pdfInScene;
-    public string pdfFileName = "SamplePDF.pdf";
+    public string pdfAbsoluteFullPath = "SamplePDF.pdf";
     // Start is called before the first frame update
     void Start()
     {
         if (pdfInScene)
-            pdfInScene.LoadPDF(pdfFileName);
+            pdfInScene.LoadPDF(pdfAbsoluteFullPath);
     }
 }

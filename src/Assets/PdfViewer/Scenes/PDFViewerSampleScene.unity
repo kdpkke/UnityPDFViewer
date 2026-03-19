@@ -156,11 +156,11 @@ RectTransform:
   - {fileID: 76129114}
   m_Father: {fileID: 1105743735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -107.700195, y: -66}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 107, y: -66}
   m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &52639671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pdfInScene: {fileID: 1556220418}
-  pdfFileName: SamplePDF.pdf
+  pdfFileName: C:\Users\ellol\Repos\UnityPDFViewer\src\Assets\PdfViewer\TestPdfOutsideStreamingAssets\SamplePDF_2.pdf
 --- !u!1 &522066681
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,11 +591,11 @@ RectTransform:
   - {fileID: 649338879}
   m_Father: {fileID: 1105743735}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 135.72021, y: -66}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -107, y: -66}
   m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &623140750
 MonoBehaviour:
   m_ObjectHideFlags: 0
