@@ -13,12 +13,17 @@ namespace UnityPdfViewer
         public Button nextButton;      // next page button
         public Button previousButton;  // previous page button
 
-        [Range(72, 300)] public int renderDPI = 150; // PDF render DPI
+        [Header("PDF Settings")]
+        [Range(72, 300)] public int renderDPI = 150;
+
+        [Tooltip("If true, the path is relative to StreamingAssets (e.g. \"docs/manual.pdf\").\n" +
+                 "If false, the path must be an absolute path (e.g. \"C:/PDFs/manual.pdf\").")]
+        public bool useStreamingAssets = true;
 
         [HideInInspector]
         public PdfNavigator navigator;
-        
-        private string pdfPath;         // full path to PDF
+
+        private string pdfPath;
 
         protected void Start()
         {
@@ -26,21 +31,29 @@ namespace UnityPdfViewer
             previousButton?.onClick.AddListener(PreviousPage);
         }
 
-        public void LoadPDF(string pdfFileName)
+        /// <summary>
+        /// Loads a PDF file. The path is resolved based on <see cref="useStreamingAssets"/>:
+        /// <list type="bullet">
+        ///   <item><c>useStreamingAssets = true</c> (default): pass a relative path inside StreamingAssets (e.g. "manual.pdf" or "docs/manual.pdf").</item>
+        ///   <item><c>useStreamingAssets = false</c>: pass an absolute file path (e.g. "C:/Users/me/Documents/manual.pdf").</item>
+        /// </list>
+        /// </summary>
+        public void LoadPDF(string path)
         {
             if (navigator != null)
             {
                 navigator.Dispose();
-                navigator = null; 
+                navigator = null;
             }
-            
-            pdfPath = Path.Combine(Application.streamingAssetsPath, pdfFileName);
 
-            // load PDF pages
+            pdfPath = useStreamingAssets
+                ? Path.Combine(Application.streamingAssetsPath, path)
+                : path;
+
             Texture2D[] pages = PdfLoader.LoadPdfAsTextures(pdfPath, renderDPI);
             navigator = new PdfNavigator(pages);
 
-            UpdateUI(); // display first page
+            UpdateUI();
         }
 
         public void NextPage()
