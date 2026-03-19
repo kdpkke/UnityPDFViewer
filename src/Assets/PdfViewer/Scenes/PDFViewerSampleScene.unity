@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pdfInScene: {fileID: 1556220418}
-  pdfFileName: C:\Users\ellol\Repos\UnityPDFViewer\src\Assets\PdfViewer\TestPdfOutsideStreamingAssets\SamplePDF_2.pdf
+  pdfAbsoluteFullPath: C:/Users/ellol/Repos/UnityPDFViewer/src/Assets/PdfViewer/TestPdfOutsideStreamingAssets/SamplePDF_2.pdf
 --- !u!1 &522066681
 GameObject:
   m_ObjectHideFlags: 0

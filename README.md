@@ -23,13 +23,12 @@ Your support keeps me caffeinated and motivated to work on new features and bug 
 
 ## Getting started
 
-1. Place your **PDF file(s)** inside the Unity `StreamingAssets` folder.  
-2. In your scene, create a **GameObject** for each PDF file you want to display.  
-3. Attach the **`PdfViewerUI`** component to the GameObject.  
+1. In your scene, create a **GameObject** for each PDF file you want to display.
+2. Attach the **`PdfViewerUI`** component to the GameObject.
 
 ### Mandatory setup
-- **RawImage**: assign a `RawImage` UI element where the PDF pages will be rendered.  
-- **PDF File Name**: set the name of your PDF file (e.g. `document.pdf`) when calling the `LoadPDF()` method (it will take the correct path from the StreamingAssets folder automatically).
+- **RawImage**: assign a `RawImage` UI element where the PDF pages will be rendered.
+- **PDF Path**: call the `LoadPDF()` method passing the **absolute path** to your PDF file (e.g. `"C:/Users/me/Documents/document.pdf"` on Windows or `"/storage/emulated/0/Documents/document.pdf"` on Android). The path will be automatically normalized by the plugin.
 
 ### Optional setup
 - **Navigation buttons**: assign `Next` and `Previous` `Button` components to allow page navigation.  
@@ -42,15 +41,14 @@ Your support keeps me caffeinated and motivated to work on new features and bug 
 1. Create a `Canvas` with a `RawImage`.  
 2. Create an empty `GameObject` named `PdfViewer`.  
 3. Attach `PdfViewerUI` to `PdfViewer`.  
-4. Drag the `RawImage` from the Canvas into the **Raw Image** field of the component.  
-5. Set **PDF File Name** to `document.pdf`.  
-6. (Optional) Add navigation buttons and link them to the component fields
-7. If you want to call the available public methods in code:  
+4. Drag the `RawImage` from the Canvas into the **Raw Image** field of the component.
+5. (Optional) Add navigation buttons and link them to the component fields.
+6. Call `LoadPDF()` with the absolute path to your PDF:
 
  ```csharp
  pdfViewerUI = GetComponent<PDFViewerUI>();
- pdfViewerUI.LoadPDF(pdfFileName);
- 
+ pdfViewerUI.LoadPDF("C:/Users/me/Documents/document.pdf");
+
  // Then you can use:
  pdfViewerUI.NextPage();
  pdfViewerUI.PreviousPage();
