@@ -7,9 +7,9 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "UnityPDFViewer/1.0.2": {
+      "UnityPDFViewer/1.0.5": {
         "dependencies": {
-          "PDFtoImage": "5.1.1.0",
+          "PDFtoImage": "5.2.1.0",
           "SkiaSharp": "3.119.0.0",
           "Unity.TextMeshPro": "0.0.0.0",
           "UnityEngine.CoreModule": "0.0.0.0",
@@ -19,11 +19,11 @@
           "UnityPDFViewer.dll": {}
         }
       },
-      "PDFtoImage/5.1.1.0": {
+      "PDFtoImage/5.2.1.0": {
         "runtime": {
           "PDFtoImage.dll": {
-            "assemblyVersion": "5.1.1.0",
-            "fileVersion": "5.1.1.0"
+            "assemblyVersion": "5.2.1.0",
+            "fileVersion": "5.2.1.0"
           }
         }
       },
@@ -70,12 +70,12 @@
     }
   },
   "libraries": {
-    "UnityPDFViewer/1.0.2": {
+    "UnityPDFViewer/1.0.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "PDFtoImage/5.1.1.0": {
+    "PDFtoImage/5.2.1.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
