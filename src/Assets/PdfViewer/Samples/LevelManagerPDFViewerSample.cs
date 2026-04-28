@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityPdfViewer;
 
-public class LevelManager : MonoBehaviour
+public class LevelManagerPDFViewerSample : MonoBehaviour
 {
     public PdfViewerUI pdfInScene;
     public string pdfAbsoluteFullPath = "SamplePDF.pdf";

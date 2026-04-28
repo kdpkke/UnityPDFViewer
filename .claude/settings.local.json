@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep:*)",
+      "Bash(git -C E:/UNITY_PROJECTS/UnityPDFViewer log --all --oneline)",
+      "Bash(git -C E:/UNITY_PROJECTS/UnityPDFViewer show 8523758 --stat)",
+      "Bash(git -C E:/UNITY_PROJECTS/UnityPDFViewer show 55255f3 --stat)",
+      "Bash(git -C E:/UNITY_PROJECTS/UnityPDFViewer log --all --oneline -- etc/UnityPackage/Runtime/PDFtoImage.dll)",
+      "Bash(git -C E:/UNITY_PROJECTS/UnityPDFViewer show 55255f3 -- src/Packages/packages-lock.json)",
+      "Bash(dotnet --version)",
+      "Bash(dotnet --list-sdks)",
+      "Bash(git -C E:/UNITY_PROJECTS/UnityPDFViewer log --all --oneline -- etc/UnityPackage/Runtime/UnityPDFViewer.dll)",
+      "Bash(cp \"C:/Users/ellol/Downloads/PDFtoImage.5.2.1/netstandard2.1/PDFtoImage.dll\" \"E:/UNITY_PROJECTS/UnityPDFViewer/etc/UnityPackage/Runtime/PDFtoImage.dll\")",
+      "Bash(cp \"C:/Users/ellol/Downloads/PDFtoImage.5.2.1/netstandard2.1/PDFtoImage.xml\" \"E:/UNITY_PROJECTS/UnityPDFViewer/etc/UnityPackage/Runtime/Plugins/PDFtoImage.xml\")",
+      "Bash(cp \"C:/Users/ellol/Downloads/PDFtoImage.5.2.1/netstandard2.1/PDFtoImage.dll\" \"E:/UNITY_PROJECTS/UnityPDFViewer/src/Library/PackageCache/de.sungaila.pdftoimage@3c9956b213/Plugins/PDFtoImage.dll\")",
+      "Bash(cp \"C:/Users/ellol/Downloads/PDFtoImage.5.2.1/netstandard2.1/PDFtoImage.xml\" \"E:/UNITY_PROJECTS/UnityPDFViewer/src/Library/PackageCache/de.sungaila.pdftoimage@3c9956b213/Plugins/PDFtoImage.xml\")",
+      "Bash(mkdir -p /tmp/UnityPdfViewerBuild)",
+      "Read(//tmp/**)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet tool:*)",
+      "Bash(powershell -Command '[System.Reflection.Assembly]::ReflectionOnlyLoadFrom\\('\\\\''E:\\\\UNITY_PROJECTS\\\\UnityPDFViewer\\\\etc\\\\UnityPackage\\\\Runtime\\\\UnityPDFViewer.dll'\\\\''\\).GetReferencedAssemblies\\(\\) | ForEach-Object { Write-Output \"$\\($_.Name\\) $\\($_.Version\\)\" }')",
+      "Bash(powershell -Command \"[System.Reflection.AssemblyName]::GetAssemblyName\\('E:\\\\UNITY_PROJECTS\\\\UnityPDFViewer\\\\etc\\\\UnityPackage\\\\Runtime\\\\UnityPDFViewer.dll'\\)\")"
+    ]
+  }
+}

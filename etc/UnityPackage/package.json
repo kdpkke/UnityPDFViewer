@@ -1,6 +1,6 @@
 {
     "name": "com.muratoreware.unitypdfviewer",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "displayName": "UnityPDFViewer",
     "description": "A PDF viewer for Unity using SkiaSharp and PDFtoImage.",
     "unity": "2022.3",
@@ -32,5 +32,12 @@
         "name": "Matteo Muratore",
         "email": "matteomuratoredev@gmail.com"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "samples": [
+        {
+            "displayName": "Sample Scene",
+            "description": "Demo scene showing how to load and display a PDF using PdfViewerUI and a LevelManager driver script. Includes two sample PDFs (one for StreamingAssets, one absolute path).",
+            "path": "Samples~/SampleScene"
+        }
+    ]
 }
