@@ -1,16 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityPdfViewer;
 
 public class LevelManagerPDFViewerSample : MonoBehaviour
 {
+    [Tooltip(
+        "PdfViewerUI in the scene that will display the PDF.\n" +
+        "Configure the PDF path and Path Mode directly on the PdfViewerUI component — " +
+        "this script just triggers the load on Start().")]
     public PdfViewerUI pdfInScene;
-    public string pdfAbsoluteFullPath = "SamplePDF.pdf";
-    // Start is called before the first frame update
+
     void Start()
     {
         if (pdfInScene)
-            pdfInScene.LoadPDF(pdfAbsoluteFullPath);
+            pdfInScene.LoadPDF(); // uses pdfPath + pathMode configured on PdfViewerUI
     }
 }

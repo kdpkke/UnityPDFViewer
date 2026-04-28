@@ -422,7 +422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pdfInScene: {fileID: 1556220418}
-  pdfAbsoluteFullPath: C:\SamplePDF_2.pdf
 --- !u!1 &522066681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1358,8 @@ MonoBehaviour:
   nextButton: {fileID: 623140750}
   previousButton: {fileID: 52639671}
   renderDPI: 300
+  pathMode: 2
+  pdfPath: SamplePDF.pdf
 --- !u!1 &1563903910
 GameObject:
   m_ObjectHideFlags: 0
