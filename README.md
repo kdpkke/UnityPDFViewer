@@ -113,7 +113,11 @@ In the **Package Manager** window, select **Unity PDF Viewer** → open the **Sa
 https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage
 ```
 
-> **Updating the package**: Unity does not poll git URLs for updates, so this package will not appear in the Package Manager *Updates* tab. To update, either remove and re-install, or delete the `de.muratoreware.unitypdfviewer` block from `Packages/packages-lock.json` to force a re-resolve.
+> **Updating the package**: Unity locks a git-URL package to the commit it first resolved (recorded in `Packages/packages-lock.json`) and does **not** poll git for newer versions, so updates won't appear in the Package Manager *Updates* tab. To move to a newer version, do one of:
+>
+> - **Force a re-resolve** — delete the `com.muratoreware.unitypdfviewer` block from `Packages/packages-lock.json`; Unity re-imports the latest commit on the default branch.
+> - **Remove & re-install** the package from the Package Manager window.
+> - **Pin a specific version** — append a release tag to the URL, e.g. `https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage#1.1.0`, and change the tag whenever you want to update (requires the matching git tag to be pushed).
 
 ## License
 This project is licensed under the MIT License – see the [LICENSE](https://github.com/kdpkke/UnityPDFViewer/blob/main/LICENSE) file for details.
