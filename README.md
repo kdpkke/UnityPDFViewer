@@ -117,7 +117,7 @@ https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage
 >
 > - **Force a re-resolve** — delete the `com.muratoreware.unitypdfviewer` block from `Packages/packages-lock.json`; Unity re-imports the latest commit on the default branch.
 > - **Remove & re-install** the package from the Package Manager window.
-> - **Pin a specific version** — append a release tag to the URL, e.g. `https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage#1.1.0`, and change the tag whenever you want to update (requires the matching git tag to be pushed).
+> - **Pin a specific version** — append a release tag to the URL, e.g. `https://github.com/kdpkke/UnityPDFViewer.git?path=etc/UnityPackage#1.2.0`, and change the tag whenever you want to update (requires the matching git tag to be pushed).
 
 ## License
 This project is licensed under the MIT License – see the [LICENSE](https://github.com/kdpkke/UnityPDFViewer/blob/main/LICENSE) file for details.
