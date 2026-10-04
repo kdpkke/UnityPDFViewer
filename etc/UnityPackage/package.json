@@ -26,7 +26,8 @@
         "Windows",
         "Linux",
         "macOS",
-        "Android"
+        "Android",
+        "iOS"
     ],
     "author": {
         "name": "Matteo Muratore",

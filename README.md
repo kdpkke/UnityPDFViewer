@@ -54,6 +54,8 @@ Starting from `1.0.7`, the PDF path is configured **on the `PdfViewerUI` compone
 
 > **Android note**: `Application.streamingAssetsPath` points inside the APK on Android, so direct file IO won't work. Use `UnityWebRequest` to copy the file to a writable location first and then load it via `Absolute` mode.
 
+> **iOS note**: the native libraries are embedded as frameworks (`pdfium.framework`, `libSkiaSharp.framework`) because the App Store rejects standalone `.dylib` files. The bundled PDFium build requires **iOS 17.0** or newer, so set *Player Settings* → *Other Settings* → *Target minimum iOS Version* accordingly.
+
 ---
 
 ## Loading the PDF
