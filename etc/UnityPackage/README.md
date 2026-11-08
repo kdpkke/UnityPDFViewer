@@ -7,6 +7,9 @@ A Unity library to render [PDF files](https://en.wikipedia.org/wiki/PDF) inside 
 This Unity library is built on top of:
 * [PDFtoImage](https://github.com/sungaila/PDFtoImage)
 
+## Requirements
+* Unity 6 (6000.0) or newer
+
 ---
 
 ## ☕ Like this project?
